@@ -48,7 +48,7 @@ public class PointCloudRenderer : MonoBehaviour, IComparer<point>
     float r;
     Vector3 Center;
     Vector3 Edges;
-    string filename = "/Office1.las";
+    string filename = "/Test.las";
     ScaleManipulator scaler;
 
     int UpdateFrequency = 5;
@@ -278,7 +278,6 @@ public class PointCloudRenderer : MonoBehaviour, IComparer<point>
             Vector3 xyz = new Vector3((float)coord[0], (float)coord[2], (float)coord[1]);
 
             Color colour = new Color32((byte)(lazReader.point.rgb[0] / 256), (byte)(lazReader.point.rgb[1] / 256), (byte)(lazReader.point.rgb[2] / 256), (byte)(lazReader.point.rgb[3] / 256));
-            //Vector3 c = new Vector3(colour.r, colour.g, colour.b);
 
             float U = UnityEngine.Random.Range(0.0f, 1.0f);
             float lod = Mathf.Log((Mathf.Pow(2, (n - 1) * (L + 1)) - 1) * U + 1) / (n - 1) * Mathf.Log(2);
@@ -333,7 +332,7 @@ public class PointCloudRenderer : MonoBehaviour, IComparer<point>
             colors[i] = node.color;
             levels[i] = node.lod;
         }
-        En = Edges.x * Edges.y * Edges.z / (scale * scale * scale);
+        En = Edge[1] * Edge[2] / (scale * scale);
 
         Vertices = points;
         C = colors;
@@ -380,6 +379,7 @@ public class PointCloudRenderer : MonoBehaviour, IComparer<point>
         // Calculate current frame rate
         float fps = 1.0f / deltaTime;
         numText.text = "Number of points:" + "\n" + point_num.ToString("0") + "\n" + "Frame rate:" + "\n" + fps.ToString("0");
+        Debug.Log(point_num);
         
         m.Clear();
         m.vertices = points;
