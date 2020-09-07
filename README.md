@@ -3,7 +3,8 @@ A point cloud viewer for Android (developed with ARCore and Unity).
 
 ## Installation package and test datasets
 APK is available at: https://drive.google.com/file/d/1ZQDi9JIxFCXbYBNVkC0Tq4k6iTA-5UaZ/view?usp=sharing
-Some test datasets are provided here:https://drive.google.com/file/d/141ROBXz1BLafYvzrlBoY184Nnap5xxk2/view?usp=sharing
+Some test datasets are provided at:
+https://drive.google.com/file/d/141ROBXz1BLafYvzrlBoY184Nnap5xxk2/view?usp=sharing
 You can also use your own point cloud datasets (better use datasets with less than 10M points, depending on the model of your device).
 
 ## Support devices
