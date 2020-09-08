@@ -48,7 +48,7 @@ public class PointCloudRenderer : MonoBehaviour, IComparer<point>
     float r;
     Vector3 Center;
     Vector3 Edges;
-    string filename = "/Test.las";
+    string filename = "/Test.laz";
     ScaleManipulator scaler;
 
     int UpdateFrequency = 5;
